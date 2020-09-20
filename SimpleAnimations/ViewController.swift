@@ -7,14 +7,43 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet var animationView: SpringView!
+    @IBOutlet var detailsLabel: UILabel!
+    @IBOutlet var animationButton: UIButton!
+    
+    var currentAnimatnionIndex: Int = 0
+    var animations:[Spring.AnimationPreset] = [
+        .FadeIn,
+        .FadeOutIn,
+        .Fall,
+        .Pop,
+        .FlipX,
+        .Morph,
+        .ZoomIn,
+        .SqueezeRight,
+        .Shake,
+    ]
+    
+    @IBAction func animationButtonTapped(_ sender: Any) {
+        let currentAnimation = animations[currentAnimatnionIndex]
+        let animationName = currentAnimation.rawValue
+        detailsLabel.text = animationName
+        animationView.animation = animationName
+        animationView.animate()
+        selectNextAnimation()
     }
-
+    
+    func selectNextAnimation() {
+        currentAnimatnionIndex += 1
+        if currentAnimatnionIndex == animations.count {
+            currentAnimatnionIndex = 0
+        }
+    }
+    
 
 }
 
