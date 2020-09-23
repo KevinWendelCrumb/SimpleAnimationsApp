@@ -38,7 +38,7 @@ class DataManager {
                       "squeeze",
                       "flash",
                       "wobble",
-                      "swing"]
+                      "swing",]
     
     let curves = ["easeIn",
                   "easeOut",
@@ -66,7 +66,5 @@ class DataManager {
                   "easeInCirc",
                   "easeOutCirc",
                   "easeInOutCirc",
-                  "easeInBack",
-                  "easeOutBack",
-                  "easeInOutBack"]
+                  "easeInBack",]
 }
