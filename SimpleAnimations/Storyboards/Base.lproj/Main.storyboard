@@ -43,9 +43,6 @@
                                 <state key="normal" title="Select next animation">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="animationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgL-xb-tex"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,9 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="animationButton" destination="G4T-LW-63h" id="ah1-Dx-mV5"/>
                         <outlet property="animationView" destination="pJT-1J-kDp" id="j4p-7m-K95"/>
-                        <outlet property="detailsLabel" destination="MgW-qG-qnP" id="XoX-Q1-r6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
